@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -48,12 +49,19 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, int position) {
 
         final ProductDetails productDetails = productDetailses.get(position);
         holder.name.setText(productDetails.getName());
         holder.size.setText(productDetails.getQuantity());
         holder.price.setText(productDetails.getPrice());
+        holder.change.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductFragment.changePrice(productDetails.getId(),holder.name.getText().toString(),holder.size.getText().toString(),holder.price.getText().toString());
+            }
+        });
+
 //        imageLoader.loadImage(productDetails.getImage(), holder.image, holder.imageProgressBar);
     }
 
@@ -66,6 +74,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
     protected class MyViewHolder extends RecyclerView.ViewHolder {
 
       private  ImageView image;
+        private Button change;
 
       private  EditText name,size,price;
 
@@ -76,6 +85,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.MyViewHo
             name=(EditText)itemView.findViewById(R.id.productName);
             size=(EditText)itemView.findViewById(R.id.productSize);
             price=(EditText)itemView.findViewById(R.id.productPrice);
+            change=(Button)itemView.findViewById(R.id.change_price);
 
         }
 

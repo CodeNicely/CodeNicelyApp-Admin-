@@ -3,7 +3,9 @@ package com.example.iket.groceryappadmin.products.model;
 
 import com.example.iket.groceryappadmin.helper.Urls;
 import com.example.iket.groceryappadmin.products.api.RequestProduct;
+import com.example.iket.groceryappadmin.products.model.data.PriceData;
 import com.example.iket.groceryappadmin.products.model.data.ProductList;
+import com.example.iket.groceryappadmin.products.view.OnPriceChanged;
 import com.example.iket.groceryappadmin.products.view.OnProductReceived;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -55,6 +57,25 @@ public class RetrofitProductProvider implements ProductProvider {
             public void onFailure(Call<ProductList> call, Throwable t) {
                 onProductReceived.onFailure();
                 t.printStackTrace();
+            }
+        });
+
+    }
+
+    @Override
+    public void changePrice(String token, int id, String name, String quantity, String cost, final OnPriceChanged onPriceChanged) {
+        Call<PriceData> call=requestProduct.changePrice(token,id,name,quantity,cost);
+        call.enqueue(new Callback<PriceData>() {
+            @Override
+            public void onResponse(Call<PriceData> call, Response<PriceData> response) {
+                onPriceChanged.onSuccess(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<PriceData> call, Throwable t) {
+                t.printStackTrace();
+                onPriceChanged.onFailure();
+
             }
         });
 

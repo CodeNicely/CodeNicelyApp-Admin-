@@ -39,9 +39,9 @@ public class RetrofitLoginScreenProvider implements LoginProvider {
     }
 
 
-    public void requestLogin(String name, String mobile, String email, final LoginCallback loginCallback) {
+    public void requestLogin(String mobile, String password, final LoginCallback loginCallback) {
 
-        Call<LoginData> loginDataCall = loginApi.requestLogin(name, mobile, email);
+        Call<LoginData> loginDataCall = loginApi.requestLogin(mobile, password);
 
         loginDataCall.enqueue(new Callback<LoginData>() {
 
@@ -49,15 +49,11 @@ public class RetrofitLoginScreenProvider implements LoginProvider {
             @Override
             public void onResponse(Call<LoginData> call, Response<LoginData> response) {
 
-
                 loginCallback.onSuccess(response.body());
-
             }
 
             @Override
             public void onFailure(Call<LoginData> call, Throwable t) {
-
-
                 t.printStackTrace();
             }
         });

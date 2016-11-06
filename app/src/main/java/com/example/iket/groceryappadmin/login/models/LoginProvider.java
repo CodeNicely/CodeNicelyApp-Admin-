@@ -8,6 +8,6 @@ import com.example.iket.groceryappadmin.login.LoginCallback;
  */
 public interface LoginProvider {
 
-    void requestLogin(String name, String mobile, String email, LoginCallback loginUsCallback);
+    void requestLogin(String mobile, String password, LoginCallback loginUsCallback);
 
 }

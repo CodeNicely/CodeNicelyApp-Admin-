@@ -74,6 +74,10 @@ public class ProductFragment extends Fragment implements ProductView {
         fragment.setArguments(args);
         return fragment;
     }
+    public static void changePrice(int product_id,String name,String quantity,String cost)
+    {
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -109,6 +113,7 @@ public class ProductFragment extends Fragment implements ProductView {
         productPresenter=new ProductPresenterImpl(this,new MockDataProducts());
         productAdapter = new ProductAdapter(getContext(), this);
         sharedPrefs = new SharedPrefs(getContext());
+
         linearLayoutManager=new LinearLayoutManager(this.getContext());
         recyclerView.setAdapter(productAdapter);
         recyclerView.setLayoutManager(linearLayoutManager);
@@ -153,6 +158,8 @@ public class ProductFragment extends Fragment implements ProductView {
         productAdapter.setData(productDatas);
         productAdapter.notifyDataSetChanged();
     }
+
+
 
 
 

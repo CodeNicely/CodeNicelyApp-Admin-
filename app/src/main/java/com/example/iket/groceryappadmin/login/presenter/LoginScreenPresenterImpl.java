@@ -22,11 +22,11 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
     }
 
     @Override
-    public void requestLogin(String name, String mobile, String email) {
+    public void requestLogin(String mobile, String password) {
 
         loginView.showLoading(true);
         Log.d("Resp", "1");
-        loginProvider.requestLogin(name, mobile, email, new LoginCallback() {
+        loginProvider.requestLogin(mobile,password, new LoginCallback() {
             @Override
             public void onSuccess(LoginData loginData) {
                 if (loginData.isSuccess()) {
@@ -35,15 +35,13 @@ public class LoginScreenPresenterImpl implements LoginScreenPresenter {
                 } else {
                     loginView.showLoading(false);
                     loginView.showMessage(loginData.getMessage());
-
                 }
 
             }
 
             public void onFailure(String error) {
-                Log.d("Response", "false");
                 loginView.showLoading(false);
-                loginView.showMessage("Failed");
+                loginView.showMessage("No Internet Connection");
 
             }
         });

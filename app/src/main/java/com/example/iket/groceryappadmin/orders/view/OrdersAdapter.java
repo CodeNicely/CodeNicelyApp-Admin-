@@ -59,6 +59,7 @@ public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.MyViewHold
         holder.id.setText("Order Id:"+orderDetails.getId());
         holder.username.setText(orderDetails.getName());
         holder.date.setText(orderDetails.getDate());
+
     }
 
 
