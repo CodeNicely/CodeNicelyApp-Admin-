@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-    tools:context="com.example.iket.groceryappadmin.orders.view.CategoryOrder"
+    tools:context="com.codenicely.project.groceryappadmin.orders.view.CategoryOrder"
         >
 
         <android.support.design.widget.AppBarLayout

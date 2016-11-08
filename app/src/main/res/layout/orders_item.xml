@@ -82,6 +82,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Packed"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@color/colorAccent"
             android:layout_toLeftOf="@+id/cancel"
             android:layout_below="@+id/order_address"
             />
@@ -91,6 +94,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
+            android:background="@color/colorAccent"
+            android:textColor="@color/white"
+            android:textStyle="bold"
             android:layout_below="@+id/order_address"
             android:layout_alignParentRight="true"
             />

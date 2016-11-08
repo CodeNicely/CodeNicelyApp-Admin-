@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.iket.groceryappadmin">
+    package="com.codenicely.project.groceryappadmin">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".home.HomePage"
+            android:name="com.codenicely.project.groceryappadmin.home.HomePage"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" >
             <intent-filter>

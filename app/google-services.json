@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "877168774010",
+    "firebase_url": "https://groceryadmin.firebaseio.com",
+    "project_id": "groceryadmin",
+    "storage_bucket": "groceryadmin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877168774010:android:2bd7d3486c979f64",
+        "android_client_info": {
+          "package_name": "com.codenicely.project.groceryappadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877168774010-8aek7cpgtos20avnmvi35f2d7s6slnet.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRw0PfB5CXFvDEdc_-vHPouX8LPqUQBV8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
