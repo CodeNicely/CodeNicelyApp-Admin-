@@ -1,97 +1,117 @@
 package com.codenicely.project.groceryappadmin.orders.view;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
 import com.codenicely.project.groceryappadmin.R;
-import com.codenicely.project.groceryappadmin.helper.image_loader.GlideImageLoader;
-import com.codenicely.project.groceryappadmin.helper.image_loader.ImageLoader;
-import com.codenicely.project.groceryappadmin.orders.model.data.OrderDetails;
+import com.codenicely.project.groceryappadmin.home.HomePage;
+import com.codenicely.project.groceryappadmin.orders.model.data.OrdersListDetails;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by iket on 19/10/16.
+ * Created by ramya on 6/11/16.
  */
-public class OrdersAdapter extends RecyclerView.Adapter<OrdersAdapter.MyViewHolder> {
-    private List<OrderDetails> OrderLists = new ArrayList<>();
-    private Context context;
-    private OrderView orderView;
+
+public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    private List<OrdersListDetails> ordersDataList = new ArrayList<>();
     private LayoutInflater layoutInflater;
+    private Context context;
+    private OrdersListDetails ordersListDetails;
     private OrdersFragment ordersFragment;
-    private ImageLoader imageLoader;
 
     public OrdersAdapter(Context context, OrdersFragment ordersFragment) {
         this.context = context;
-        layoutInflater = LayoutInflater.from(context);
-        orderView = new OrdersFragment();
         this.ordersFragment = ordersFragment;
-        imageLoader = new GlideImageLoader(context);
-    }
-
-    public void setData(List<OrderDetails> cityScreenDetailsList) {
-       OrderLists = cityScreenDetailsList;
+        this.layoutInflater = LayoutInflater.from(context);
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View itemView = layoutInflater.inflate(R.layout.orders_item, parent, false);
-        return new MyViewHolder(itemView);
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view = layoutInflater.inflate(R.layout.orders_list_item, parent, false);
+        return new ViewHolder1(view);
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        ordersListDetails = ordersDataList.get(position);
+        final ViewHolder1 viewHolder = (ViewHolder1) holder;
 
-        final OrderDetails orderDetails = OrderLists.get(position);
-        holder.action.setText(orderDetails.getAction());
-        holder.address.setText(orderDetails.getAddress());
-        holder.cost.setText(orderDetails.getCost());
-        holder.id.setText("Order Id:"+orderDetails.getId());
-        holder.username.setText(orderDetails.getName());
-        holder.date.setText(orderDetails.getDate());
+        viewHolder.order_status.setText(ordersListDetails.getStatus());
+        //viewHolder.image.setBackgroundResource(R.drawable.processing);
+        //viewHolder.order_status_icon.setBackgroundResource(R.drawable.ic_done_all_green_600_24dp);
 
+        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (context instanceof HomePage) {
+                    OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
+                    Bundle args = new Bundle();
+                    args.putString("order_id", ordersListDetails.getOrder_id());
+                    orderDetailsFragment.setArguments(args);
+                    ((HomePage) context).addFragment(orderDetailsFragment, "Order Details");
+                    ((HomePage) context).getSupportActionBar().hide();
+                }
+            }
+        });
+        viewHolder.order_status_time.setText("Order Placed On " + ordersListDetails.getCreated_time());
+        viewHolder.order_id.setText(String.valueOf(ordersListDetails.getOrder_id()));
+        viewHolder.total_amount.setText("Rs. " + ordersListDetails.getTotal_bill());
+        viewHolder.subtotal_amount.setText("Rs. " + ordersListDetails.getTotal_discounted());
+        viewHolder.delivery_slot_time.setText(ordersListDetails.getDelivery_slot());
+        viewHolder.delivery_charges_amount.setText("Rs. " + ordersListDetails.getDelivery_charges());
     }
 
+    public void setData(List<OrdersListDetails> ordersListDetails) {
+        this.ordersDataList = ordersListDetails;
+
+    }
 
     @Override
     public int getItemCount() {
-        return OrderLists.size();
+        return ordersDataList.size();
     }
 
-    protected class MyViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder1 extends RecyclerView.ViewHolder {
+        @BindView(R.id.layout_relative)
+        RelativeLayout relativeLayout;
+        @BindView(R.id.order_status)
+        TextView order_status;
+        @BindView(R.id.image)
+        ImageView image;
+        @BindView(R.id.delivery_slot_time)
+        TextView delivery_slot_time;
+        @BindView(R.id.subtotal_amount)
+        TextView subtotal_amount;
+        @BindView(R.id.delivery_charges_amount)
+        TextView delivery_charges_amount;
+        @BindView(R.id.total_bill)
+        TextView total_amount;
+        @BindView(R.id.order_status_icon)
+        ImageView order_status_icon;
+        @BindView(R.id.order_status_time)
+        TextView order_status_time;
+        @BindView(R.id.order_id)
+        TextView order_id;
 
+        public ViewHolder1(View itemView) {
 
-
-        private EditText cost;
-
-        private TextView address,date,id,username;
-
-        private Button cancel,action;
-
-        private MyViewHolder(View itemView) {
             super(itemView);
-            ButterKnife.bind(this,itemView);
 
-            cost=(EditText)itemView.findViewById(R.id.order_cost);
-            address=(TextView)itemView.findViewById(R.id.order_address);
-            date=(TextView)itemView.findViewById(R.id.order_date);
-            id=(TextView)itemView.findViewById(R.id.order_id);
-            username=(TextView)itemView.findViewById(R.id.order_username);
-            cancel=(Button) itemView.findViewById(R.id.cancel);
-            action=(Button) itemView.findViewById(R.id.action);
+            ButterKnife.bind(this, itemView);
+
 
         }
-
     }
-
 }

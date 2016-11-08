@@ -1,10 +1,10 @@
 package com.codenicely.project.groceryappadmin.home;
 
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -23,13 +23,14 @@ public class HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private SharedPrefs sharedPrefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        sharedPrefs=new SharedPrefs(this);
+        sharedPrefs = new SharedPrefs(this);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -39,7 +40,13 @@ public class HomePage extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        addFragment(new LogInFragment(),"LogIn");
+
+        if (sharedPrefs.isLoggedIn()) {
+            setFragment(new CategoryOrder(), "Orders");
+            getSupportActionBar().hide();
+        } else {
+            addFragment(new LogInFragment(), "LogIn");
+        }
     }
 
     @Override
@@ -60,25 +67,18 @@ public class HomePage extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            if(sharedPrefs.isLoggedIn())
-            {
-                setFragment(new HomeFragment(),"Home");
-
-            }
-            else
-            {
-                setFragment(new LogInFragment(),"LogIn");
+            if (sharedPrefs.isLoggedIn()) {
+                setFragment(new HomeFragment(), "Home");
+            } else {
+                setFragment(new LogInFragment(), "LogIn");
                 Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
             }
 
         } else if (id == R.id.nav_place_order) {
-            if(sharedPrefs.isLoggedIn())
-            {
+            if (sharedPrefs.isLoggedIn()) {
 
-            }
-            else
-            {
-                setFragment(new LogInFragment(),"LogIn");
+            } else {
+                setFragment(new LogInFragment(), "LogIn");
                 Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
             }
 
@@ -86,19 +86,18 @@ public class HomePage extends AppCompatActivity
         } else if (id == R.id.nav_orders) {
 //            Intent in=new Intent(HomePage.this, Order_Categories.class);
 //            startActivity(in);
-            if(sharedPrefs.isLoggedIn())
-            setFragment(new CategoryOrder(),"Orders");
-            else
-            {
-                setFragment(new LogInFragment(),"LogIn");
+            if (sharedPrefs.isLoggedIn()) {
+                setFragment(new CategoryOrder(), "Orders");
+                getSupportActionBar().hide();
+            } else {
+                setFragment(new LogInFragment(), "LogIn");
                 Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
             }
         } else if (id == R.id.nav_products) {
-            if(sharedPrefs.isLoggedIn())
-            setFragment(new ProductFragment(),"Products");
-            else
-            {
-                setFragment(new LogInFragment(),"LogIn");
+            if (sharedPrefs.isLoggedIn())
+                setFragment(new ProductFragment(), "Products");
+            else {
+                setFragment(new LogInFragment(), "LogIn");
                 Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
             }
         }
@@ -117,6 +116,7 @@ public class HomePage extends AppCompatActivity
             getSupportActionBar().setTitle(title);
         }
     }
+
     public void addFragment(Fragment fragment, String title) {
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
@@ -127,8 +127,7 @@ public class HomePage extends AppCompatActivity
         }
     }
 
-    public void setHome()
-    {
-        addFragment(new HomeFragment(),"Home");
+    public void setHome() {
+        addFragment(new HomeFragment(), "Home");
     }
 }

@@ -8,7 +8,6 @@
         android:id="@+id/cardView"
         app:contentPadding="8dp"
         app:cardCornerRadius="8dp"
-        android:layout_centerInParent="true"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:layout_width="match_parent"

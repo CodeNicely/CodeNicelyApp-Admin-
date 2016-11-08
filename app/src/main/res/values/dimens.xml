@@ -20,5 +20,15 @@
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="medium_text_size">24dp</dimen>
     <dimen name="large_text_size">36dp</dimen>
+    <dimen name="card_margin_medium">4dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="badge_text_size">13sp</dimen>
+    <dimen name="textSizeMedium">24dp</dimen>
+    <dimen name="textSizeLarge">32dp</dimen>
+    <dimen name="card_radius_medium">4dp</dimen>
+    <dimen name="card_padding_medium">4dp</dimen>
+    <dimen name="textSizeExtraSmall">12dp</dimen>
+    <dimen name="padding_large">10dp</dimen>
 
 </resources>

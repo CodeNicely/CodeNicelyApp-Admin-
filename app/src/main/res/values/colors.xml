@@ -7,6 +7,22 @@
     <color name="accent_light">#6A7C87</color>
 
     <color name="codeNicelyColor">#52A795</color>
+    <color name="accentOrange">#FE6C54</color>
+    <color name="accentBlue">#01579B</color>
+    <!--<color name="colorAccent">#C1C1C1</color>-->
+    <!-- <color name="colorPrimary">#480000</color>
+    <color name="colorPrimaryDark">#2E0000</color>
+    <color name="colorAccent">#A63C06</color>
+   -->
+    <color name="color_text">#126259</color>
+    <color name="transparent">#00000000</color>
+    <color name="feed_bg">#d3d6db</color>
+    <color name="feed_item_bg">#ffffff</color>
+    <color name="feed_item_border">#E1F5FE</color>
+    //
+    <color name="check_out_bg">#80D8FF</color>
+
+    <color name="black_overlay">#66000000</color>
 
 
     <!-- Screens background color-->

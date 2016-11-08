@@ -17,9 +17,9 @@ import retrofit2.http.POST;
 public interface LoginApi {
 
     @FormUrlEncoded
-    @POST(Urls.SEND_OTP)
+    @POST(Urls.SUB_URL_ADMIN_LOGIN)
     Call<LoginData> requestLogin(@Field("mobile") String mobile,
-                                 @Field("password") String password,@Field("fcm_token") String fcm);
+                                 @Field("password") String password,@Field("fcm") String fcm);
 
 
 }

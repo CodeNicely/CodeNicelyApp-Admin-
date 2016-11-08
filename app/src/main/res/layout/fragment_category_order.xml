@@ -14,26 +14,29 @@
             android:layout_height="wrap_content"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-            <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/collapsingToolbar"
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:contentScrim="?attr/colorPrimary"
-                app:titleEnabled="false"
-                app:layout_scrollFlags="scroll|exitUntilCollapsed">
-                <!--
-                            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-                            app:layout_scrollFlags="scroll|enterAlways"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:title="Orders"
+                android:title="Orders"
+                android:titleTextColor="@color/white"
+                app:titleTextColor="@color/white"
+                />
 
-                -->
-                <android.support.design.widget.TabLayout
+
+            <android.support.design.widget.TabLayout
                     android:id="@+id/tabLayout"
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
+                    app:tabIndicatorColor="@android:color/primary_text_dark"
                     android:layout_gravity="bottom"
-                    android:background="@color/colorAccent"
                     app:tabMode="scrollable" />
-            </android.support.design.widget.CollapsingToolbarLayout>
+
 
         </android.support.design.widget.AppBarLayout>
 

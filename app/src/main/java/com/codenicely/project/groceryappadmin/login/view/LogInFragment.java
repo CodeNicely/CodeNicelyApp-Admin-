@@ -84,13 +84,12 @@ public class LogInFragment extends Fragment implements LoginScreenView {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_log_in, container, false);
+        View view = inflater.inflate(R.layout.fragment_log_in, container, false);
         sharedPrefs = new SharedPrefs(getContext());
-        if(sharedPrefs.isLoggedIn())
-        {
-            ((HomePage)getActivity()).setHome();
+        if (sharedPrefs.isLoggedIn()) {
+            ((HomePage) getActivity()).setHome();
         }
-        progressbar = (ProgressBar)view.findViewById(R.id.progressBar);
+        progressbar = (ProgressBar) view.findViewById(R.id.progressBar);
         login_button = (Button) view.findViewById(R.id.button);
         mobile = (EditText) view.findViewById(R.id.login_mobile);
         password = (EditText) view.findViewById(R.id.login_password);
@@ -113,13 +112,11 @@ public class LogInFragment extends Fragment implements LoginScreenView {
 
                 if (((mobile1.equals("") || mobile1.equals(null)) || mobile1.length() != 10) ||
                         (password1.equals("") || password1.equals(null))
-                        )
-                {
+                        ) {
 
 
-                }
-                else {
-                    loginScreenPresenter.requestLogin(mobile1, password1,MyApplication.getFcm());
+                } else {
+                    loginScreenPresenter.requestLogin(mobile1, password1, MyApplication.getFcm());
                 }
 
             }
@@ -161,7 +158,7 @@ public class LogInFragment extends Fragment implements LoginScreenView {
         sharedPrefs = new SharedPrefs(getContext());
         sharedPrefs.setLogin(true);
         sharedPrefs.setAccessToken(access_token);
-        ((HomePage)getActivity()).setHome();
+        ((HomePage) getActivity()).setHome();
 
     }
 

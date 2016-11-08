@@ -13,11 +13,10 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-
 import com.codenicely.project.groceryappadmin.R;
 import com.codenicely.project.groceryappadmin.helper.SharedPrefs;
-import com.codenicely.project.groceryappadmin.orders.model.MockData;
-import com.codenicely.project.groceryappadmin.orders.model.data.OrderDetails;
+import com.codenicely.project.groceryappadmin.orders.model.RetrofitOrdersProvider;
+import com.codenicely.project.groceryappadmin.orders.model.data.OrdersListDetails;
 import com.codenicely.project.groceryappadmin.orders.presenter.OrdersPresenter;
 import com.codenicely.project.groceryappadmin.orders.presenter.OrdersPresenterImpl;
 
@@ -33,7 +32,7 @@ import butterknife.ButterKnife;
  * Use the {@link OrdersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OrdersFragment extends Fragment implements OrderView {
+public class OrdersFragment extends Fragment implements OrderListView {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -41,14 +40,12 @@ public class OrdersFragment extends Fragment implements OrderView {
     /* @BindView(R.id.tabLayout)
      TabLayout tabLayout;
  */
-   private RecyclerView recyclerView;
-   private ProgressBar progressBar;
+    private RecyclerView recyclerView;
+    private ProgressBar progressBar;
     // TODO: Rename and change types of parameters
-    private int mParam1;
-    private String mParam2;
+    private int order_type = -9999;
     private OrdersPresenter orderPresenter;
     private OrdersAdapter ordersAdapter;
-    private ViewPagerAdapter viewPagerAdapter;
     private LinearLayoutManager linearLayoutManager;
     private String token;
     private SharedPrefs sharedPrefs;
@@ -66,7 +63,7 @@ public class OrdersFragment extends Fragment implements OrderView {
      */
     // TODO: Rename and change types and number of parameters
     public static OrdersFragment newInstance(int param1) {
-        Log.d("Res","sf");
+        Log.d("Res", "sf");
         OrdersFragment fragment = new OrdersFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PARAM1, param1);
@@ -78,7 +75,7 @@ public class OrdersFragment extends Fragment implements OrderView {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getInt(ARG_PARAM1);
+            order_type = getArguments().getInt(ARG_PARAM1);
         }
     }
 
@@ -89,23 +86,27 @@ public class OrdersFragment extends Fragment implements OrderView {
 
         View view = inflater.inflate(R.layout.fragment_orders, container, false);
         ButterKnife.bind(this, view);
-        recyclerView=(RecyclerView)view.findViewById(R.id.order_recycler);
-        progressBar=(ProgressBar)view.findViewById(R.id.order_progressbar);
+
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.order_recycler);
+        progressBar = (ProgressBar) view.findViewById(R.id.order_progressbar);
         initialize();
         progressBar.setVisibility(View.INVISIBLE);
-        Log.d("Response",mParam1+"");
-        orderPresenter.getOrders(token);
+        Log.d("Response", order_type + "");
+        if (order_type != -9999) {
+            orderPresenter.getOrders(token, order_type);
+        }
         return view;
 
     }
 
     void initialize() {
 //        orderPresenter = new OrdersPresenterImpl(this, new RetrofitOrdersProvider());
-        orderPresenter=new OrdersPresenterImpl(this,new MockData());
+        orderPresenter = new OrdersPresenterImpl(this, new RetrofitOrdersProvider());
         ordersAdapter = new OrdersAdapter(getContext(), this);
         sharedPrefs = new SharedPrefs(getContext());
         token = sharedPrefs.getAccessToken();
-        linearLayoutManager=new LinearLayoutManager(getContext());
+        linearLayoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(ordersAdapter);
     }
@@ -136,29 +137,27 @@ public class OrdersFragment extends Fragment implements OrderView {
 
     @Override
     public void showProgressbar(boolean show) {
-        if (show) {
+   /*     if (show) {
             progressBar.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.INVISIBLE);
+            recyclerView.setVisibility(View.GONE);
         } else {
-            progressBar.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);
-        }
+        }*/
 
     }
 
     @Override
-    public void onDataReceived(List<OrderDetails> orderDatas) {
-        ordersAdapter.setData(orderDatas);
+    public void onDataReceived(List<OrdersListDetails> ordersListDetailsList) {
+        ordersAdapter.setData(ordersListDetailsList);
         ordersAdapter.notifyDataSetChanged();
     }
-    
 
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
-
 
 
 }

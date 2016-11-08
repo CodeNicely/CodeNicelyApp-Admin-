@@ -3,8 +3,8 @@ package com.codenicely.project.groceryappadmin.orders.model;
 
 import com.codenicely.project.groceryappadmin.helper.Urls;
 import com.codenicely.project.groceryappadmin.orders.api.RequestOrders;
-import com.codenicely.project.groceryappadmin.orders.model.data.OrderList;
-import com.codenicely.project.groceryappadmin.orders.view.OnOrdersReceived;
+import com.codenicely.project.groceryappadmin.orders.OnOrdersListReceived;
+import com.codenicely.project.groceryappadmin.orders.model.data.OrdersListData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -43,17 +43,17 @@ public class RetrofitOrdersProvider implements OrdersProvider {
     }
 
     @Override
-    public void getOrders(String access_token, final OnOrdersReceived onOrdersReceived) {
-        Call<OrderList> call = requestOrders.getOrders(access_token);
-        call.enqueue(new Callback<OrderList>() {
+    public void getOrders(String access_token,int order_type, final OnOrdersListReceived onOrdersListReceived) {
+        Call<OrdersListData> call = requestOrders.getOrders(access_token,order_type);
+        call.enqueue(new Callback<OrdersListData>() {
             @Override
-            public void onResponse(Call<OrderList> call, Response<OrderList> response) {
-                onOrdersReceived.onSuccess(response.body());
+            public void onResponse(Call<OrdersListData> call, Response<OrdersListData> response) {
+                onOrdersListReceived.onSuccess(response.body());
             }
 
             @Override
-            public void onFailure(Call<OrderList> call, Throwable t) {
-                onOrdersReceived.onFailure();
+            public void onFailure(Call<OrdersListData> call, Throwable t) {
+                onOrdersListReceived.onFailure();
                 t.printStackTrace();
             }
         });

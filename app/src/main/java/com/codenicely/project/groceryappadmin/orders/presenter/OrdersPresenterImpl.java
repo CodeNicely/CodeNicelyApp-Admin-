@@ -1,43 +1,43 @@
 package com.codenicely.project.groceryappadmin.orders.presenter;
 
 import com.codenicely.project.groceryappadmin.orders.model.OrdersProvider;
-import com.codenicely.project.groceryappadmin.orders.model.data.OrderList;
-import com.codenicely.project.groceryappadmin.orders.view.OnOrdersReceived;
-import com.codenicely.project.groceryappadmin.orders.view.OrderView;
+import com.codenicely.project.groceryappadmin.orders.OnOrdersListReceived;
+import com.codenicely.project.groceryappadmin.orders.model.data.OrdersListData;
+import com.codenicely.project.groceryappadmin.orders.view.OrderListView;
 
 /**
  * Created by iket on 19/10/16.
  */
 public class OrdersPresenterImpl implements OrdersPresenter {
-    private OrderView orderView;
+    private OrderListView orderListView;
     private OrdersProvider orderProvider;
 
-    public OrdersPresenterImpl(OrderView orderView, OrdersProvider orderProvider) {
-        this.orderView = orderView;
+    public OrdersPresenterImpl(OrderListView orderListView, OrdersProvider orderProvider) {
+        this.orderListView = orderListView;
         this.orderProvider = orderProvider;
     }
 
     @Override
-    public void getOrders(String access_token) {
+    public void getOrders(String access_token,int order_type) {
 
-        orderView.showProgressbar(true);
+        orderListView.showProgressbar(true);
 
-        orderProvider.getOrders(access_token, new OnOrdersReceived() {
+        orderProvider.getOrders(access_token,order_type, new OnOrdersListReceived() {
             @Override
             public void onFailure() {
-                orderView.showProgressbar(false);
-                orderView.showMessage("Error..try again");
+                orderListView.showProgressbar(false);
+                orderListView.showMessage("Error..try again");
             }
 
             @Override
-            public void onSuccess(OrderList orderList) {
-                if (orderList.isSuccess()) {
-                    orderView.showProgressbar(false);
-                    orderView.onDataReceived(orderList.getOrderDetailses());
+            public void onSuccess(OrdersListData ordersListData) {
+                if (ordersListData.isSuccess()) {
+                    orderListView.showProgressbar(false);
+                    orderListView.onDataReceived(ordersListData.getOrder_list());
 
                 } else {
-                    orderView.showProgressbar(false);
-                    orderView.showMessage(orderList.getMessage());
+                    orderListView.showProgressbar(false);
+                    orderListView.showMessage(ordersListData.getMessage());
 
                 }
             }
