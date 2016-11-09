@@ -92,28 +92,38 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 viewHolder.change_status_button.setText("Confirmed");
                 viewHolder.change_status_button.setVisibility(View.VISIBLE);
                 viewHolder.change_status_button.setEnabled(true);
-
+                viewHolder.cancle_button.setVisibility(View.VISIBLE);
+                viewHolder.cancle_button.setEnabled(true);
                 break;
             case 1:
                 viewHolder.change_status_button.setText("Dispatched");
                 viewHolder.change_status_button.setVisibility(View.VISIBLE);
                 viewHolder.change_status_button.setEnabled(true);
 
+                viewHolder.cancle_button.setVisibility(View.VISIBLE);
+                viewHolder.cancle_button.setEnabled(true);
+
                 break;
             case 2:
                 viewHolder.change_status_button.setText("Delivered");
                 viewHolder.change_status_button.setVisibility(View.VISIBLE);
                 viewHolder.change_status_button.setEnabled(true);
+
+                viewHolder.cancle_button.setVisibility(View.VISIBLE);
+                viewHolder.cancle_button.setEnabled(true);
                 break;
             case 3:
 
                 viewHolder.change_status_button.setVisibility(View.GONE);
                 viewHolder.change_status_button.setEnabled(false);
-
+                viewHolder.cancle_button.setVisibility(View.GONE);
+                viewHolder.cancle_button.setEnabled(false);
                 break;
             case -1:
                 viewHolder.change_status_button.setVisibility(View.GONE);
                 viewHolder.change_status_button.setEnabled(false);
+                viewHolder.cancle_button.setVisibility(View.GONE);
+                viewHolder.cancle_button.setEnabled(false);
                 break;
 
 

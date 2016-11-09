@@ -4,6 +4,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Meghal on 6/19/2016.
  */
@@ -11,7 +14,7 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
 
     final int TAB_COUNT = 5;
     private String tabTitles[] = new String[]{"Pending", "Placed", "Dispatched", "Delivered", "Canceled"};
-
+    private List<OrdersListFragment> ordersListFragmentList = new ArrayList<>();
 
     public ViewPagerAdapter(FragmentManager manager) {
         super(manager);
@@ -24,7 +27,18 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return OrdersListFragment.newInstance(position);
+
+        ordersListFragmentList.add(position,OrdersListFragment.newInstance(position));
+        return ordersListFragmentList.get(position);
+    }
+
+    public void refreshFragment(int position) {
+
+        if(ordersListFragmentList.size()>position)
+        {
+            ordersListFragmentList.get(position).refresh();
+        }
+
     }
 
     @Override

@@ -18,7 +18,6 @@ import android.widget.Toast;
 
 import com.codenicely.project.groceryappadmin.R;
 import com.codenicely.project.groceryappadmin.helper.SharedPrefs;
-import com.codenicely.project.groceryappadmin.home.HomePage;
 import com.codenicely.project.groceryappadmin.orders.model.RetrofitOrderStatusChangeHelper;
 import com.codenicely.project.groceryappadmin.orders.model.RetrofitOrdersProvider;
 import com.codenicely.project.groceryappadmin.orders.model.data.ChangeStatusData;
@@ -185,7 +184,8 @@ public class OrdersListFragment extends Fragment implements OrderListView, Order
     @Override
     public void onStatusChanged(ChangeStatusData changeStatusData) {
 
-        ((HomePage) getContext()).setFragment(new OrdersFragment(), "OrdersFragment");
+        orderPresenter.getOrders(sharedPrefs.getAccessToken(), order_type);
+        //  ((HomePage) getContext()).setFragment(new OrdersFragment(), "OrdersFragment");
 
     }
 
@@ -212,6 +212,12 @@ public class OrdersListFragment extends Fragment implements OrderListView, Order
         ordersAdapter.notifyDataSetChanged();
     }
 
+    public void refresh() {
+
+        orderPresenter.getOrders(sharedPrefs.getAccessToken(), order_type);
+
+    }
+
 
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
@@ -236,7 +242,7 @@ public class OrdersListFragment extends Fragment implements OrderListView, Order
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                orderStatusChangePresenter.requestOrderStatusChange(sharedPrefs.getAccessToken(),orderId,cancle);
+                orderStatusChangePresenter.requestOrderStatusChange(sharedPrefs.getAccessToken(), orderId, cancle);
                 ad.cancel();
             }
         });
