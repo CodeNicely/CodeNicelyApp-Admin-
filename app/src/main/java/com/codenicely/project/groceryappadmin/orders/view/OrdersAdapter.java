@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -29,11 +30,11 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private LayoutInflater layoutInflater;
     private Context context;
     private OrdersListDetails ordersListDetails;
-    private OrdersFragment ordersFragment;
+    private OrdersListFragment ordersListFragment;
 
-    public OrdersAdapter(Context context, OrdersFragment ordersFragment) {
+    public OrdersAdapter(Context context, OrdersListFragment ordersListFragment) {
         this.context = context;
-        this.ordersFragment = ordersFragment;
+        this.ordersListFragment = ordersListFragment;
         this.layoutInflater = LayoutInflater.from(context);
     }
 
@@ -44,13 +45,11 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         ordersListDetails = ordersDataList.get(position);
         final ViewHolder1 viewHolder = (ViewHolder1) holder;
 
         viewHolder.order_status.setText(ordersListDetails.getStatus());
-        //viewHolder.image.setBackgroundResource(R.drawable.processing);
-        //viewHolder.order_status_icon.setBackgroundResource(R.drawable.ic_done_all_green_600_24dp);
 
         viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +70,63 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         viewHolder.subtotal_amount.setText("Rs. " + ordersListDetails.getTotal_discounted());
         viewHolder.delivery_slot_time.setText(ordersListDetails.getDelivery_slot());
         viewHolder.delivery_charges_amount.setText("Rs. " + ordersListDetails.getDelivery_charges());
+
+        viewHolder.name.setText("Name " + ordersListDetails.getName());
+        viewHolder.address.setText(ordersListDetails.getHouse_no() + " , " + ordersListDetails.getLocality());
+        viewHolder.city.setText(ordersListDetails.getCity());
+        viewHolder.mobile.setText(ordersListDetails.getMobile());
+
+        viewHolder.change_status_button.setText(ordersListDetails.getStatus_next());
+
+        viewHolder.cancle_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ordersListFragment.changeStatus(ordersDataList.get(position).getOrder_id(), true);
+            }
+        });
+
+        switch (ordersDataList.get(position).getStatus_id()) {
+
+            case 0:
+                viewHolder.change_status_button.setText("Confirmed");
+                viewHolder.change_status_button.setVisibility(View.VISIBLE);
+                viewHolder.change_status_button.setEnabled(true);
+
+                break;
+            case 1:
+                viewHolder.change_status_button.setText("Dispatched");
+                viewHolder.change_status_button.setVisibility(View.VISIBLE);
+                viewHolder.change_status_button.setEnabled(true);
+
+                break;
+            case 2:
+                viewHolder.change_status_button.setText("Delivered");
+                viewHolder.change_status_button.setVisibility(View.VISIBLE);
+                viewHolder.change_status_button.setEnabled(true);
+                break;
+            case 3:
+
+                viewHolder.change_status_button.setVisibility(View.GONE);
+                viewHolder.change_status_button.setEnabled(false);
+
+                break;
+            case -1:
+                viewHolder.change_status_button.setVisibility(View.GONE);
+                viewHolder.change_status_button.setEnabled(false);
+                break;
+
+
+        }
+
+        viewHolder.change_status_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ordersListFragment.changeStatus(ordersDataList.get(position).getOrder_id(), false);
+            }
+        });
+
     }
 
     public void setData(List<OrdersListDetails> ordersListDetails) {
@@ -104,6 +160,24 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         TextView order_status_time;
         @BindView(R.id.order_id)
         TextView order_id;
+
+        @BindView(R.id.name)
+        TextView name;
+
+        @BindView(R.id.address)
+        TextView address;
+
+        @BindView(R.id.mobile)
+        TextView mobile;
+
+        @BindView(R.id.city)
+        TextView city;
+
+        @BindView(R.id.cancle_button)
+        Button cancle_button;
+
+        @BindView(R.id.change_status_button)
+        Button change_status_button;
 
         public ViewHolder1(View itemView) {
 

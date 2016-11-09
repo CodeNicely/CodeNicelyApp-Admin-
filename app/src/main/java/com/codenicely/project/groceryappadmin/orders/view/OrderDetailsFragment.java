@@ -13,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-
 import com.codenicely.project.groceryappadmin.R;
 import com.codenicely.project.groceryappadmin.helper.SharedPrefs;
 import com.codenicely.project.groceryappadmin.home.HomePage;

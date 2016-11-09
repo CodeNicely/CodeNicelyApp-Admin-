@@ -9,8 +9,8 @@ import android.support.v4.app.FragmentPagerAdapter;
  */
 class ViewPagerAdapter extends FragmentPagerAdapter {
 
-    final int TAB_COUNT = 4;
-    private String tabTitles[] = new String[]{"Placed", "Dispatched", "Delivered", "Cancel"};
+    final int TAB_COUNT = 5;
+    private String tabTitles[] = new String[]{"Pending", "Placed", "Dispatched", "Delivered", "Canceled"};
 
 
     public ViewPagerAdapter(FragmentManager manager) {
@@ -24,11 +24,16 @@ class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return OrdersFragment.newInstance(position);
+        return OrdersListFragment.newInstance(position);
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         return tabTitles[position];
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
     }
 }

@@ -139,11 +139,84 @@
             android:layout_below="@+id/temp_layout2"
             android:background="#424242" />
 
+        <LinearLayout
+            android:id="@+id/contact_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line2"
+            android:orientation="vertical"
+            android:padding="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="Name"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:gravity="end"
+                    android:text="8109109457"
+                    android:textColor="#424242" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:id="@+id/addressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:text="N-23 , Subhash chandra bose marg"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:gravity="end"
+                    android:text="Raipur"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+
+            android:id="@+id/line7"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/contact_layout"
+            android:background="#424242" />
+
         <RelativeLayout
             android:id="@+id/relative3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/line2"
+            android:layout_below="@+id/line7"
             android:layout_margin="1dp"
             android:padding="4dp">
 
@@ -249,9 +322,44 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:text="200"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/accentBlue"
                 android:textSize="@dimen/textSizeMedium" />
         </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relative6"
+            android:orientation="horizontal"
+            android:weightSum="10"
+            android:padding="4dp"
+            >
+
+
+            <Button
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_weight="5"
+                android:id="@+id/cancle_button"
+                android:text="Cancel"
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cancle_rounded_button"
+                />
+
+            <Button
+
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_weight="5"
+                android:text="Change Status"
+                android:id="@+id/change_status_button"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

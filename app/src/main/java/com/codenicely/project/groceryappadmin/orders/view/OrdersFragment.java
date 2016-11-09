@@ -3,26 +3,16 @@ package com.codenicely.project.groceryappadmin.orders.view;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
-import android.widget.Toast;
 
 import com.codenicely.project.groceryappadmin.R;
-import com.codenicely.project.groceryappadmin.helper.SharedPrefs;
-import com.codenicely.project.groceryappadmin.orders.model.RetrofitOrdersProvider;
-import com.codenicely.project.groceryappadmin.orders.model.data.OrdersListDetails;
-import com.codenicely.project.groceryappadmin.orders.presenter.OrdersPresenter;
-import com.codenicely.project.groceryappadmin.orders.presenter.OrdersPresenterImpl;
-
-import java.util.List;
-
-import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -32,23 +22,22 @@ import butterknife.ButterKnife;
  * Use the {@link OrdersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class OrdersFragment extends Fragment implements OrderListView {
+public class OrdersFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    /* @BindView(R.id.tabLayout)
-     TabLayout tabLayout;
- */
-    private RecyclerView recyclerView;
-    private ProgressBar progressBar;
+
     // TODO: Rename and change types of parameters
-    private int order_type = -9999;
-    private OrdersPresenter orderPresenter;
-    private OrdersAdapter ordersAdapter;
-    private LinearLayoutManager linearLayoutManager;
-    private String token;
-    private SharedPrefs sharedPrefs;
+    private String mParam1;
+    private String mParam2;
+    //    @BindView(R.id.viewPager)
+    private ViewPager viewpager;
+    //    @BindView(R.id.tabLayout)
+    private TabLayout tabLayout;
+
+    private ViewPagerAdapter viewPagerAdapter;
+
     private OnFragmentInteractionListener mListener;
 
     public OrdersFragment() {
@@ -59,14 +48,16 @@ public class OrdersFragment extends Fragment implements OrderListView {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @return A new instance of fragment ProductFragment.
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment OrdersFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static OrdersFragment newInstance(int param1) {
-        Log.d("Res", "sf");
+    public static OrdersFragment newInstance(String param1, String param2) {
         OrdersFragment fragment = new OrdersFragment();
         Bundle args = new Bundle();
-        args.putInt(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM1, param1);
+        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -75,40 +66,36 @@ public class OrdersFragment extends Fragment implements OrderListView {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            order_type = getArguments().getInt(ARG_PARAM1);
+            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-        View view = inflater.inflate(R.layout.fragment_orders, container, false);
-        ButterKnife.bind(this, view);
-
-
-        recyclerView = (RecyclerView) view.findViewById(R.id.order_recycler);
-        progressBar = (ProgressBar) view.findViewById(R.id.order_progressbar);
-        initialize();
-        progressBar.setVisibility(View.INVISIBLE);
-        Log.d("Response", order_type + "");
-        if (order_type != -9999) {
-            orderPresenter.getOrders(token, order_type);
-        }
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_category_order, container, false);
+        tabLayout = (TabLayout) view.findViewById(R.id.tabLayout);
+        viewpager = (ViewPager) view.findViewById(R.id.viewPager);
+        viewPagerAdapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        viewpager.setAdapter(viewPagerAdapter);
+        tabLayout.setupWithViewPager(viewpager);
         return view;
-
     }
 
-    void initialize() {
-//        orderPresenter = new OrdersPresenterImpl(this, new RetrofitOrdersProvider());
-        orderPresenter = new OrdersPresenterImpl(this, new RetrofitOrdersProvider());
-        ordersAdapter = new OrdersAdapter(getContext(), this);
-        sharedPrefs = new SharedPrefs(getContext());
-        token = sharedPrefs.getAccessToken();
-        linearLayoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(ordersAdapter);
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+
+    @Override
+    public void onStart() {
+        viewPagerAdapter.notifyDataSetChanged();
+
+        super.onStart();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -130,34 +117,31 @@ public class OrdersFragment extends Fragment implements OrderListView {
         mListener = null;
     }
 
-    @Override
-    public void showMessage(String message) {
-        Toast.makeText(getContext(), message, Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void showProgressbar(boolean show) {
-   /*     if (show) {
-            progressBar.setVisibility(View.VISIBLE);
-            recyclerView.setVisibility(View.GONE);
-        } else {
-            progressBar.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.VISIBLE);
-        }*/
-
-    }
-
-    @Override
-    public void onDataReceived(List<OrdersListDetails> ordersListDetailsList) {
-        ordersAdapter.setData(ordersListDetailsList);
-        ordersAdapter.notifyDataSetChanged();
-    }
-
-
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p/>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
 
+/*    public void setFragment(Fragment fragment, String title) {
+        if (fragment != null) {
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.home_layout, fragment);
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+            getActivity().getActionBar().setTitle("" + title);
 
+        }
+
+    }*/
 }

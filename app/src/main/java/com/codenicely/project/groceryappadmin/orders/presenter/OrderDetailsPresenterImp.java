@@ -27,7 +27,10 @@ public class OrderDetailsPresenterImp implements OrderDetailsPresenter {
                     orderDetails.showProgressBar(false);
                     if(orderData.isSuccess())
                     {
-                        orderDetails.setOrdersList(orderData.getOrder_items_list());
+                        if(orderData.getOrder_items_list()!=null)
+                        {
+                            orderDetails.setOrdersList(orderData.getOrder_items_list());
+                        }
                     }
                     else
                     {

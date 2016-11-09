@@ -14,4 +14,5 @@ public class Urls {
     public static final String CATEGORIES = "category/";
  public static final String SUB_URL_ADMIN_ORDERS = "admin_orders/";
     public static final String SUB_URL_ORDERS_DETAILS = "order_items/";
+    public static final String SUB_URL_ADMIN_CHANGE_STATUS ="admin_change_status/" ;
 }
