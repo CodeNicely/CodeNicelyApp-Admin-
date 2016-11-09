@@ -174,6 +174,6 @@ public class HomePage extends AppCompatActivity
     }
 
     public void setHome() {
-        addFragment(new HomeFragment(), "Home");
+        addFragment(new OrdersFragment(), "Orders");
     }
 }
