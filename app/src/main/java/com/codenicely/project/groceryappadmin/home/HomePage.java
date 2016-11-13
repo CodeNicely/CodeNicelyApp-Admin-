@@ -34,7 +34,7 @@ public class HomePage extends AppCompatActivity
         setSupportActionBar(toolbar);
         sharedPrefs = new SharedPrefs(this);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+     /*   DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
@@ -42,13 +42,8 @@ public class HomePage extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        if (sharedPrefs.isLoggedIn()) {
-            addFragment(new OrdersFragment(), "Orders");
-            getSupportActionBar().hide();
-        } else {
-            addFragment(new LogInFragment(), "LogIn");
-        }
+        drawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+     */       addFragment(new LogInFragment(), "LogIn");
     }
 
     /*@Override
@@ -109,26 +104,7 @@ public class HomePage extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
-            if (sharedPrefs.isLoggedIn()) {
-                setFragment(new HomeFragment(), "Home");
-            } else {
-                setFragment(new LogInFragment(), "LogIn");
-                Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
-            }
-
-        } else if (id == R.id.nav_place_order) {
-            if (sharedPrefs.isLoggedIn()) {
-
-            } else {
-                setFragment(new LogInFragment(), "LogIn");
-                Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
-            }
-
-
-        } else if (id == R.id.nav_orders) {
-//            Intent in=new Intent(HomePage.this, Order_Categories.class);
-//            startActivity(in);
+        if (id == R.id.nav_orders) {
             if (sharedPrefs.isLoggedIn()) {
                 setFragment(new OrdersFragment(), "Orders");
                 getSupportActionBar().hide();
@@ -136,14 +112,34 @@ public class HomePage extends AppCompatActivity
                 setFragment(new LogInFragment(), "LogIn");
                 Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
             }
-        } else if (id == R.id.nav_products) {
+        }
+
+/*        if (id == R.id.nav_home) {
+            if (sharedPrefs.isLoggedIn()) {
+                setFragment(new HomeFragment(), "Home");
+            } else {
+                setFragment(new LogInFragment(), "LogIn");
+                Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
+            }
+
+        }*//* else if (id == R.id.nav_place_order) {
+            if (sharedPrefs.isLoggedIn()) {
+
+            } else {
+                setFragment(new LogInFragment(), "LogIn");
+                Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
+            }
+
+
+        }*/
+       /* else if (id == R.id.nav_products) {
             if (sharedPrefs.isLoggedIn())
                 setFragment(new ProductFragment(), "Products");
             else {
                 setFragment(new LogInFragment(), "LogIn");
                 Toast.makeText(HomePage.this, "LogIn First", Toast.LENGTH_SHORT).show();
             }
-        }
+        }*/
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -172,8 +168,10 @@ public class HomePage extends AppCompatActivity
         }
 
     }
-
+/*
     public void setHome() {
-        addFragment(new OrdersFragment(), "Orders");
-    }
+        setFragment(new OrdersFragment(), "Orders");
+        getSupportActionBar().hide();
+
+    }*/
 }

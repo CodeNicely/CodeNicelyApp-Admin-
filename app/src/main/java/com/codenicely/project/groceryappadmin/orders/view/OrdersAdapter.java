@@ -12,6 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.codenicely.project.groceryappadmin.R;
+import com.codenicely.project.groceryappadmin.home.HomeActivity;
 import com.codenicely.project.groceryappadmin.home.HomePage;
 import com.codenicely.project.groceryappadmin.orders.model.data.OrdersListDetails;
 
@@ -54,13 +55,12 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (context instanceof HomePage) {
+                if (context instanceof HomeActivity) {
                     OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
                     Bundle args = new Bundle();
                     args.putString("order_id", ordersListDetails.getOrder_id());
                     orderDetailsFragment.setArguments(args);
-                    ((HomePage) context).addFragment(orderDetailsFragment, "Order Details");
-                    ((HomePage) context).getSupportActionBar().hide();
+                    ((HomeActivity) context).addFragment(orderDetailsFragment, "Order Details");
                 }
             }
         });

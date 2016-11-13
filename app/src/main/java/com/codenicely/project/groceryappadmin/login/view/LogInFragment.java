@@ -1,6 +1,7 @@
 package com.codenicely.project.groceryappadmin.login.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -15,6 +16,7 @@ import android.widget.Toast;
 import com.codenicely.project.groceryappadmin.R;
 import com.codenicely.project.groceryappadmin.helper.MyApplication;
 import com.codenicely.project.groceryappadmin.helper.SharedPrefs;
+import com.codenicely.project.groceryappadmin.home.HomeActivity;
 import com.codenicely.project.groceryappadmin.home.HomePage;
 import com.codenicely.project.groceryappadmin.login.models.RetrofitLoginScreenProvider;
 import com.codenicely.project.groceryappadmin.login.presenter.LoginScreenPresenter;
@@ -86,9 +88,6 @@ public class LogInFragment extends Fragment implements LoginScreenView {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_log_in, container, false);
         sharedPrefs = new SharedPrefs(getContext());
-        if (sharedPrefs.isLoggedIn()) {
-            ((HomePage) getActivity()).setHome();
-        }
         progressbar = (ProgressBar) view.findViewById(R.id.progressBar);
         login_button = (Button) view.findViewById(R.id.button);
         mobile = (EditText) view.findViewById(R.id.login_mobile);
@@ -158,8 +157,9 @@ public class LogInFragment extends Fragment implements LoginScreenView {
         sharedPrefs = new SharedPrefs(getContext());
         sharedPrefs.setLogin(true);
         sharedPrefs.setAccessToken(access_token);
-        ((HomePage) getActivity()).setHome();
-
+        Intent intent = new Intent(getActivity(), HomeActivity.class);
+        startActivity(intent);
+        getActivity().finish();
     }
 
     @Override
