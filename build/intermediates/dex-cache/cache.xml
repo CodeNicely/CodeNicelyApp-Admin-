@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="d952b19ed5fc3b2a6badd3dbc093a27428062026">
+        sha1="8615bfd332dd557b96c54e01a9bf63b47e4ce777">
         <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b5367f15f3fc80f2617960cd3c28330626a85d10/classes.dex" />
     </item>
     <item
@@ -115,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="388b4be1b01234c01b0d5216d6538b832407051b">
+        sha1="23521fb5fd1fafd058d6706bbe4f3546f9b1a9b6">
         <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_df3bf2a526dc20128ff301f82b1eece4b7577a4b/classes.dex" />
     </item>
     <item
