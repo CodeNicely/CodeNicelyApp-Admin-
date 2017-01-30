@@ -224,17 +224,19 @@
                 android:id="@+id/delivery_slot_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Delivery Slot"
+                android:text="Delivery Slot :"
                 android:textSize="@dimen/textSizeExtraSmall" />
 
             <TextView
                 android:id="@+id/delivery_slot_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="2001"
+                android:gravity="end"
+                android:layout_toRightOf="@id/delivery_slot_text"
+                android:maxLines="1"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:text="2001"
                 android:textColor="@color/accentOrange"
                 android:textSize="@dimen/textSizeExtraSmall" />
         </RelativeLayout>
@@ -251,7 +253,7 @@
                 android:id="@+id/subtotal_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Subtotal"
+                android:text="Subtotal :"
                 android:textSize="@dimen/textSizeExtraSmall" />
 
             <TextView
@@ -278,7 +280,7 @@
                 android:id="@+id/delivery_charges_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delivery Charges"
+                android:text="Delivery Charges :"
                 android:textSize="@dimen/textSizeExtraSmall" />
 
             <TextView
