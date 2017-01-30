@@ -213,9 +213,12 @@ public class OrdersListFragment extends Fragment implements OrderListView, Order
     }
 
     public void refresh() {
+        if(order_type<=3){
+            orderPresenter.getOrders(sharedPrefs.getAccessToken(), order_type);
+        }else{
+            orderPresenter.getOrders(sharedPrefs.getAccessToken(), -1);
 
-        orderPresenter.getOrders(sharedPrefs.getAccessToken(), order_type);
-
+        }
     }
 
 

@@ -3,345 +3,345 @@
 
     <item
         is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.1_362fe665f5c5d08883379cb62ce0d8774d48c04f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_91430982645a29103fbdce19c8a4a90f9bce08e9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_a2aeddb483c12ce5d5aa12765b4d5cfe81cafeb6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8615bfd332dd557b96c54e01a9bf63b47e4ce777">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b5367f15f3fc80f2617960cd3c28330626a85d10/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_3a49e2ea3a7ea52af81761329af538d9ee16958b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_4db4019ad5781a3b8800e21faf68b992fc0df2c9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.1.0_fde9774cbdfae0976a1b199958f059d1881a6473/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.5/ece7b5d0870e66d8226dab6dcf47a2b12afff061/rxjava-1.1.5.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ece7b5d0870e66d8226dab6dcf47a2b12afff061">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.5_4880081c112b43ab02de6653433f84e00f57886b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.1_df5a71280029a57a68a6a66a842e3fe8d27cdfea/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_6d40c4ab9cd9675262d94fd9f8683cbcd0a4e60d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_5d62d2ec2c846408468c82253ba16b0dc11742c6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.1_9b6ab8237f60d7516a53163feae58996bfbfdf6b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="23521fb5fd1fafd058d6706bbe4f3546f9b1a9b6">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_df3bf2a526dc20128ff301f82b1eece4b7577a4b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_7a6a02a85ef14e7247f3c93ce2b7215020f6090f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.1.0_4cdf3694e359052244d36bba21c0655f9998cf22/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_01ddb1efc0562834f6155fad353f265540200fc7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_dc0e458108d8d354b9b710f79b91ef6b58a2d804/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_abbe8dd93b9ec4a7bfa7d9d2f9bbd09970f38913/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_d06f6787e698c16c1ade109bdffdfa64ee036a07/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.1_a11b3e76ce105a45992999688fb53ccef40e0943/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_0206a5bfac87a157ca42fa63399b1f85f2d3b2c2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_52fb27c548f6b0eee8880e1b2c99ec6eee5f4708/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_d42198e935069083e21db2086ed4ac26714597c1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_0812f36c75417785f71d7d1bf5706a35e8bebcfc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_a77253c94b94a9cf10716fedd06a8c260c7b0d83/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_ce446b4f4c4bd9e7eda8ef2b72738f96e0aef062/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_20740dbe8c0003e806e48fdc032ac2bc5f171b0a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.4.1/381fc1096ba65040d8e80ea43b2e1d9bad02345e/logging-interceptor-3.4.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.4.1_164a29c8821885c0e3f4aebef84d2d1e337a6369/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_5b87d4f50a10d1b7571cdde365e816be1d58e7b5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4a36600281a648769411ef642c331851732bf29e">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_9fbdade0c70bf9a63d7e6683d1fb71c36b21bcc2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.1_59c07058d5f46fd6001b82574c3e3d65f20668bf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_4823efe607ed9d2cd0935014ff0f844d08cd9e52/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_e0eee480ab70d92abfd00d2330f40463b51ce135/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_716d091ae9cd5d54833a1c5b2de1a5cbebbae15f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.1_6f4bb74b304215244d5c13fd73a959917902e407/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_7b7d56375f69e148e5363663fa127e171d01d60f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_e77e0b85849d515624bb899ef49072b615596e8a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
-        <dex dex="/home/meghal/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_8c4901e206735e87687dc03b21d6d0d263d8e046/classes.dex" />
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-9.6.1_23d7abb3c8fd3cc5d069691a45444ce3a039d9ab/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/adapter-rxjava/2.1.0/693eddc23e87ab13f9cf5001707ce8e7e1d1ff01/adapter-rxjava-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/adapter-rxjava-2.1.0_13a09fa91f6049d2d1f6f5254b4e7b437087bdac/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-9.6.1_73918b8579d4265eaf57081eed8ba30f94496196/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.2.1_309f8756edb999a08c2799b93e04087eed1935ed/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-9.6.1_bee06db9742f8e64ab1d954f7c3e4b0a9747a1eb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="80dd8bea08bc5fe10b10a3243b8279c856ccc690">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-9.6.1_6fe71a72ca1d46b27af99811ed590b13f4eac944/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.jakewharton/butterknife/8.4.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a07818a1ecabdb149998823429cce555af4b9cba">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.jakewharton-butterknife-8.4.0_82609dfe44968ebd518e8758497ca93b4a37cabb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.2.1_fec021a8b0cd1b18b068eb924b68fe2e68c123f4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="cf24849e7b3d329084001d388c20d048ce1313f1">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_cd8207bbf612607b9bc3063f843446ba029dd9fd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-24.2.1_a27bca14b91b6d3c521011db8ede4e0c4ed0fbd2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.4.1/c7c4f9e35c2fd5900da24f9872e3971801f08ce0/okhttp-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/okhttp-3.4.1_40b9e07851f14e76fda0165cc4a46d4a70e986fc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_199dc9f8f3173f4d108baee4d44ff1168329c542/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.2.1_d5558d397c66b87831909f5068ba01b413b61414/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-9.6.1_0e9bc90e07e9b49a5d9abe36ede508d3a832088b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-24.2.1_300e507997571c7017ea48ff6eee0d1528a52e10/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/io.reactivex/rxjava/1.1.5/ece7b5d0870e66d8226dab6dcf47a2b12afff061/rxjava-1.1.5.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ece7b5d0870e66d8226dab6dcf47a2b12afff061">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/rxjava-1.1.5_38012f8678da37c7832c5faff4d35fcca75413ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.2.1_6478cf0617cfd814287baecce2641351a03469ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_199b69d1d5d1311454b86bf6de64e09e5bc6c467/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.9.0/f824591a0016efbaeddb8300bee54832a1398cfa/okio-1.9.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/okio-1.9.0_010d470a59b32a82ad0012995ca8688d7bd20cb6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-24.2.1_430f520093ea935f98602e014f3bd847a0bb0a58/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-24.2.1_214a1e4b678d00db3fbc402ba6128d151811efc5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_7a734b4369132215d99014d92c19a1575ff4084a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-9.6.1_1bec645c29ebfe0768c2d43ed340f5e2dbb0e128/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-24.2.1_a2812b8150e8d92afa1025970d58b44cb8614ac3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6e8314e49ad516645bfeaa2be665ac3ce4bf3990">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5a79acb0ee61870a35c4ccb5c3e8b6cc00cf66d8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.2.1_4ab48564f514bb3aade04d9d272378dd8ce71041/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.2.1_494c7c5080fe2d0441b7f652653a49e6e9386786/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_23d26021a38afc9792ba7cf9faca304d332246dd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.4.1/381fc1096ba65040d8e80ea43b2e1d9bad02345e/logging-interceptor-3.4.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="381fc1096ba65040d8e80ea43b2e1d9bad02345e">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/logging-interceptor-3.4.1_224493da078000f645243942002a40842fd8255e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife-annotations/8.4.0/ea392375cf9ff59234a82e7928a204215ccc98cd/butterknife-annotations-8.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ea392375cf9ff59234a82e7928a204215ccc98cd">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-annotations-8.4.0_1eae0a3b0f987b603c38b6acd4aa152710b393aa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.2.1_f3bdfd81cd489c0f481a473e5491de0e7e147746/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/retrofit-2.1.0_49f121698d4cd720d8c9f6c5d8203a3b804b01d1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.2.1_61636782da1c152bc331c01d3ce1a1e219ce550b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/converter-gson-2.1.0_3b7d77895838edb34d8015974956d7f1b933f068/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_dad570e175b56183c3ae886210adfd95471eb3cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_27c157097bfe64952198338ae56bb6d849300584/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-9.6.1_07d52d6b376c3610ddfbfe40535949b54ea5aca9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/ramya/AndroidStudioProjects/GroceryApp-Admin-/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.2.1_5515b34634aa4090c9b13723f2bd56cf86ffbd27/classes.dex" />
     </item>
 
 </items>
