@@ -224,8 +224,9 @@
                 android:id="@+id/delivery_slot_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Delivery Slot :"
-                android:textSize="@dimen/textSizeExtraSmall" />
+                android:text="@string/delivery_slot"
+                android:textSize="@dimen/textSizeExtraSmall"
+                 />
 
             <TextView
                 android:id="@+id/delivery_slot_time"
@@ -233,12 +234,11 @@
                 android:layout_height="wrap_content"
                 android:text="2001"
                 android:gravity="end"
-                android:layout_toRightOf="@id/delivery_slot_text"
-                android:maxLines="1"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/delivery_slot_text"
                 android:textColor="@color/accentOrange"
-                android:textSize="@dimen/textSizeExtraSmall" />
+                android:textSize="@dimen/textSizeExtraSmall"
+                android:layout_alignParentRight="true" />
         </RelativeLayout>
 
         <RelativeLayout
