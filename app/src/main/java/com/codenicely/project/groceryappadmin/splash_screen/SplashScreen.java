@@ -30,7 +30,7 @@ public class SplashScreen extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
         ButterKnife.bind(this);
         sharedPrefs = new SharedPrefs(this);
-        Glide.with(this).load(R.drawable.code_nicely_logo_small_colored1).into(code_nicely_logo);
+        Glide.with(this).load(R.drawable.code_nicely_logo_small_colored).into(code_nicely_logo);
         Glide.with(this).load(R.drawable.veg_world_logo).into(veg_word_logo);
 
         Handler handler = new Handler();
