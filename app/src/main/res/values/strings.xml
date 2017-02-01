@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GroceryApp(Admin)</string>
+    <string name="app_name">VegWorld Admin App</string>
     <string name="title_activity_main">GroceryApp(Admin)</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -12,4 +12,5 @@
     <string name="order_details_label">Order Details</string>
     <string name="codenicely">CodeNicely</string>
     <string name="tagline">Quality Services</string>
+    <string name="powered_by">Powered By</string>
 </resources>

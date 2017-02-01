@@ -53,9 +53,9 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         viewHolder.order_status.setText(ordersListDetails.getStatus());
 
-        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
                 if (context instanceof HomeActivity) {
                     OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
                     Bundle args = new Bundle();
