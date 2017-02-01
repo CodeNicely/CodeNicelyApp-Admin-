@@ -5,7 +5,7 @@ package com.codenicely.project.groceryappadmin.helper;
  */
 public class Urls {
 
-    public static final String BASE_URL="http://162.243.217.126:9630/";
+    public static final String BASE_URL="http://162.243.217.126:8000/";
     //public static final String BASE_URL="http://192.168.1.2:8109/";
 
 
