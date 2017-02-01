@@ -3,6 +3,7 @@ package com.codenicely.project.groceryappadmin.orders.view;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +59,8 @@ public class OrdersAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 if (context instanceof HomeActivity) {
                     OrderDetailsFragment orderDetailsFragment = new OrderDetailsFragment();
                     Bundle args = new Bundle();
-                    args.putString("order_id", ordersListDetails.getOrder_id());
+                    args.putString("order_id", ordersDataList.get(position).getOrder_id());
+                    Log.d("order_id",ordersDataList.get(position).getOrder_id());
                     orderDetailsFragment.setArguments(args);
                     ((HomeActivity) context).addFragment(orderDetailsFragment, "Order Details");
                 }
