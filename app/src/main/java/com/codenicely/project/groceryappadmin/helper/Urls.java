@@ -5,7 +5,7 @@ package com.codenicely.project.groceryappadmin.helper;
  */
 public class Urls {
 
-    public static final String BASE_URL="http://162.243.217.126:8888/";
+    public static final String BASE_URL="http://app.vegworld.online:8000/";
 
     public static final String SUB_URL_ADMIN_LOGIN = "admin_login/";
 
