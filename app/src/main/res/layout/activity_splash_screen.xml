@@ -46,13 +46,13 @@
         android:layout_weight="2" />
 
     <TextView
-        android:id="@+id/codeNicely"
+        android:id="@+id/poweredBy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:layout_weight="2"
         android:gravity="center"
-        android:text="@string/codenicely"
+        android:text="@string/powered_by"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="12dp" />
 

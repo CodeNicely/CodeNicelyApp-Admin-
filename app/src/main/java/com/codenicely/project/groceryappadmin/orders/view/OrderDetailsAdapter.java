@@ -55,9 +55,9 @@ public class OrderDetailsAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
         productViewHolder.quantity1.setText(String.valueOf(ordersDetails.getQuantity()));
         productViewHolder.product_total.setText(String.valueOf(ordersDetails.getSize() * ordersDetails.getQuantity()) + " " + ordersDetails.getUnit());
 
-        productViewHolder.product_price.setText("Rs. " + String.valueOf(ordersDetails.getPrice()));
+        productViewHolder.product_price.setText("Rs. " + String.valueOf(ordersDetails.getDiscounted_price()));
         productViewHolder.product_name.setText(ordersDetails.getName());
-        productViewHolder.product_cost.setText("Rs. " + String.valueOf(ordersDetails.getPrice() * ordersDetails.getQuantity()));
+        productViewHolder.product_cost.setText("Rs. " + String.valueOf(ordersDetails.getDiscounted_price() * ordersDetails.getQuantity()));
         imageLoader.loadImage(ordersDetails.getImage(), productViewHolder.product_image, productViewHolder.image_progress_bar);
     }
 

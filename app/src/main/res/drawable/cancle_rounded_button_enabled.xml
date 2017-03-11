@@ -13,6 +13,6 @@
         android:top="0dp" />
     <stroke
         android:width="2dip"
-        android:color="#FF0000" />
+        android:color="@color/colorPrimaryDark" />
     <corners android:radius="16dp" />
 </shape>
